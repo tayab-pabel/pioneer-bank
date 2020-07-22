@@ -1,0 +1,54 @@
+body {
+  padding: 100px;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 70px;
+}
+h3 {
+  font-size: 50px;
+}
+h4 {
+  font-size: 40px;
+}
+h5 {
+  font-size: 30px;
+}
+.submit-area{
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 5px 5px 10px gray;
+}
+
+#transaction-area {
+  display: none;
+}
+.deposit {
+  border-radius: 10px;
+  background-color: slateblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.withdraw {
+  border-radius: 10px;
+  background-color:orange;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.balance {
+  border-radius: 10px;
+  background-color: lightseagreen;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
