@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Meta Data -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pioneer Bank</title>
+  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Title -->
+  <title>Pioneer Bank</title>
+
 </head>
 <body>
 
@@ -37,19 +47,19 @@
           <div class="col-md-4">
             <div class="card deposit-card p-4 mt-4">
               <h4>Deposit</h4>
-              <h3>$<span id="current-deposit">000</span></h3>
+              <h3>$<span id="deposit-balance">000</span></h3>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card withdraw-card p-4 mt-4">
               <h4>Withdraw</h4>
-              <h3>$ 000</h3>
+              <h3>$<span id="withdraw-balance">000</h3>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card balance-card p-4 mt-4">
               <h4>Balance</h4>
-              <h3>$ 000</h3>
+              <h3>$<span id="current-balance">1000</h3>
             </div>
           </div>
         </div>
@@ -93,17 +103,35 @@
     // Deposit button event handler
     const depositBtn = document.getElementById('deposit-btn');
     depositBtn.addEventListener('click', function(){
-      const depositAmount = document.getElementById('deposit-amount').value;
-      const depositNumber = parseFloat(depositAmount);
-      
-      const currentDeposit = document.getElementById('current-deposit').innerText;
-      const currentDepositNumber = parseFloat(currentDeposit);
-      const totalDeposit = depositNumber + currentDepositNumber;
-
-      document.getElementById('current-deposit').innerText = totalDeposit;
+      const depositNumber = getInputNumber('deposit-amount');
+      updateAmount('deposit-balance', depositNumber);
+      updateAmount('current-balance', depositNumber);
       document.getElementById('deposit-amount').value = "";
-
     })
+
+    // Withdraw button event handler
+    const withdrawBtn = document.getElementById('withdraw-btn');
+      withdrawBtn.addEventListener('click', function(){
+      const withdrawNumber = getInputNumber('withdraw-amount');
+      updateAmount('withdraw-balance', withdrawNumber);
+      updateAmount('current-balance', -1 * withdrawNumber);
+      document.getElementById('withdraw-amount').value = "";
+    })
+
+    // Get input function
+    function getInputNumber (id) {
+      const amount = document.getElementById(id).value;
+      const amountNumber = parseFloat(amount);
+      return amountNumber;
+    }
+
+    // Update amount function
+    function updateAmount (id, depositNumber){
+      const current = document.getElementById(id).innerText;
+      const currentNumber = parseFloat(current);
+      const totalAmount = depositNumber + currentNumber;
+      document.getElementById(id).innerText = totalAmount;
+    }
 
   </script>
 
@@ -112,5 +140,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
 </body>
 </html>
