@@ -1,54 +1,62 @@
 body {
-  padding: 100px;
-}
-h1 {
-  font-size: 60px;
-}
-h2 {
-  font-size: 70px;
-}
-h3 {
-  font-size: 50px;
-}
-h4 {
-  font-size: 40px;
-}
-h5 {
-  font-size: 30px;
-}
-.submit-area{
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  box-shadow: 5px 5px 10px gray;
+    font-family: 'Poppins', sans-serif;
+    background-color:rgba(129, 63, 214, 0.05);
 }
 
-#transaction-area {
-  display: none;
+h1, h3 {
+    font-size: 40px;
+    font-weight: 700;
 }
-.deposit {
-  border-radius: 10px;
-  background-color: slateblue;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+
+h2, h4 {
+    font-size: 30px;
+    font-weight: 600;
 }
-.withdraw {
-  border-radius: 10px;
-  background-color:orange;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+
+h1, h2 {
+    color: #813fd6;
 }
-.balance {
-  border-radius: 10px;
-  background-color: lightseagreen;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+
+.card {
+    border: 0;
+    border-radius: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+.form-control{
+    border: none;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 25px;
+}
+
+.form-control:focus {
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 1px solid #813fd6;
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn {
+    color: #FFFFFF;
+    background: #813fd6;
+    padding: 14px 28px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.btn:hover {
+    background: #6A34B0;
+    color: #FFFFFF;
+}
+
+.deposit-card,
+.withdraw-card,
+.balance-card {
+    background-color: #813fd6;
+}
+
+#transaction {
+    display: none;
+}
+
