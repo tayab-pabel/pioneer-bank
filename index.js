@@ -29,6 +29,7 @@ const withdrawBtn = document.getElementById('withdraw-btn');
 function getInputNumber (id) {
   const amount = document.getElementById(id).value;
   const amountNumber = parseFloat(amount);
+  console.log(amountNumber);
   return amountNumber;
 }
 
