@@ -1,8 +1,8 @@
 # Pioneer Bank 
 ## ([Live Preview](https://tayab-pabel.github.io/pioneer-bank/))
 ## Features
-   - It's a simple javascript project.
-   - Responsive user-friendly interface.
+   - It's a simple vanilla js project.
+   - Responsive user-friendly layout.
 ## Technology & Tools
    - HTML
    - CSS
