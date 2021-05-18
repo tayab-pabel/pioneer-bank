@@ -4,7 +4,7 @@
    - It's a vanilla js project.
    - Deposit and withdraw calculator.
    - Responsive layout.
-## Technology & Tools
+## Technology
    - HTML
    - CSS
    - Bootstrap
