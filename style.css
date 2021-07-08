@@ -24,7 +24,7 @@ h1, h2 {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.form-control{
+.form-control {
     border: none;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 25px;
